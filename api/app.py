@@ -1,19 +1,22 @@
 from flask import Flask
 app = Flask(__name__)
 
+if __name__ == "__main__":
+    app.run()
+
 @app.route('/')
 def hello_lobbie():
     return 'Hello, Lobbie!'
 
     # TODO
-@app.route('/file')
-def get_file():
-    return 'false'
+#@app.route('/file')
+#def get_file():
+#    return 'false'
 
     # TODO
-@app.route('/files')
-def get_prev_gen_files():
-    return 'false'
+#@app.route('/files')
+#def get_prev_gen_files():
+#    return 'false'
 
 ### Requirements
 # Each docker container must include a Flask API.
@@ -30,8 +33,10 @@ def get_prev_gen_files():
 #       ~/VENVS/lobbie-developer-project/Scripts/activate.bat
 
 ## Install PIP    ## Unnecessary, already installed and/or added by creating VENV
+
 #       pip install flask
-#       Cpip install flask-sqlalchemy
+#       pip install flask-sqlalchemy
 #       pip install flask-restful
+#       pip install python-dotenv
 
 
