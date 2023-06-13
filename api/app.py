@@ -22,11 +22,11 @@ app.config['SQLALCHEMY_TRACK_MODIFCATIONS'] = False
 db = SQLAlchemy(app)
 
 # class
-class 
+class File(db.Model):
 
-@app.route('/')
-def hello_lobbie():
-    return 'Hello, Lobbie!'
+#@app.route('/')
+#def hello_lobbie():
+#    return 'Hello, Lobbie!'
 
     # TODO
 #@app.route('/file')
@@ -58,5 +58,3 @@ def hello_lobbie():
 #       pip install flask-sqlalchemy
 #       pip install flask-restful
 #       pip install python-dotenv
-
-
