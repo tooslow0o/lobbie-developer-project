@@ -1,8 +1,28 @@
-from flask import Flask
+from flask import Flask, request, jsonify, make_response
+from flask_restful import Resource, Api
+from flask_sqlalchemy import SQLAlchemy
+
+# create an instance of Flask
 app = Flask(__name__)
 
+# do not run this if it's called elsewhere
 if __name__ == "__main__":
     app.run()
+
+# create an API object for flask-restful
+api = Api(app)
+
+# connect to the database if it exists
+# if not, create a new db
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////emp.db'
+# remove flask server warning
+app.config['SQLALCHEMY_TRACK_MODIFCATIONS'] = False
+
+# sqlalchemy mapper
+db = SQLAlchemy(app)
+
+# class
+class 
 
 @app.route('/')
 def hello_lobbie():
