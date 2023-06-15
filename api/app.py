@@ -23,10 +23,12 @@ db = SQLAlchemy(app)
 
 # class
 class File(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
 
-#@app.route('/')
-#def hello_lobbie():
-#    return 'Hello, Lobbie!'
+@app.route('/')
+def hello_lobbie():
+    return 'Hello, Lobbie!'
 
     # TODO
 #@app.route('/file')
@@ -50,7 +52,7 @@ class File(db.Model):
 #       python -m venv ~/VENVS/lobbie-developer-project/
 
 ## Activate Venv
-#       ~/VENVS/lobbie-developer-project/Scripts/activate.bat
+#       doc
 
 ## Install PIP    ## Unnecessary, already installed and/or added by creating VENV
 
