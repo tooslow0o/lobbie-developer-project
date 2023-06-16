@@ -24,7 +24,8 @@ db = SQLAlchemy(app)
 # class
 class File(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
+    #make size 6?
+    random_text = db.Column(db.String(80), nullable=False)
 
 @app.route('/')
 def hello_lobbie():
@@ -48,11 +49,9 @@ def hello_lobbie():
 # Unit tests for any python code you write.
 
 
-## Create Venv
-#       python -m venv ~/VENVS/lobbie-developer-project/
+## Create Venv          python -m venv ~/VENVS/lobbie-developer-project/
 
-## Activate Venv
-#       doc
+## Activate Venv        ~/VENVS/lobbie-developer-project/Scripts/activate.bat
 
 ## Install PIP    ## Unnecessary, already installed and/or added by creating VENV
 
